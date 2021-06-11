@@ -10,8 +10,8 @@ const ProductCard = (props) => {
       <div className="card-body">
         <h5 className="card-title">{title}</h5>
         <div className="card-price-container">
-          <h5 className="card-current-price">R$ {price.toFixed(2)}</h5>
-          <h5 className="card-last-price">R$ {(price * 1.1).toFixed(2)}</h5>
+          <h5 className="card-current-price">$ {price.toFixed(2)}</h5>
+          <h5 className="card-last-price">$ {(price * 1.1).toFixed(2)}</h5>
         </div>
         <button className="btn btn-primary">
           Add to cart
