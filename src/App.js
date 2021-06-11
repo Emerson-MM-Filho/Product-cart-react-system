@@ -1,9 +1,10 @@
-import './App.css';
+import './App.scss';
+import ProductCard from "./components/productCard";
 
 function App() {
   return (
-    <div>
-
+    <div className='page-content'>
+      <ProductCard/>
     </div>
   );
 }
