@@ -3,18 +3,24 @@ import './cart.scss'
 const Cart = (props) => {
   const { image, title, price } = props.product
 
+  let name = ''
+  const maxName = 15;
+
+  if (title.length >= maxName) {
+    for (let index = 0; index <= maxName; index += 1) {
+      name += title[index]
+      if (index === maxName) {
+        name += '...'
+      }
+    }
+  }
+
+
   return (
-    <div className='cart'>
-      <h2>My products</h2>
-      <div className='cart-header-product'>
-        <h3>Item</h3>
-        <h3>Price</h3>
-      </div>
-      <div>
-        <img src={image} alt=""/>
-        <h5>{title}</h5>
-        <p>{price}</p>
-      </div>
+    <div className="product-card-cart">
+      <img src={image} alt=""/>
+      <h5>{name}</h5>
+      <p>${price}</p>
     </div>
   )
 }
