@@ -24,7 +24,12 @@ function App() {
       <div className='all-products-cards'>
         {allProducts.map((current, index) => <ProductCard product={current} key={index} addToCart={addToCart}/>)}
       </div>
-      <div className='product-cart-container'>
+      <div className='cart'>
+        <h2>My products cart</h2>
+        <div className='cart-header-product'>
+          <h3>Item</h3>
+          <h3>Price</h3>
+        </div>
         {productToAddInCart.map((current, index) => <Cart product={current} key={index}/>)}
       </div>
     </div>
