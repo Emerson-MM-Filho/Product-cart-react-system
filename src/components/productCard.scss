@@ -14,6 +14,10 @@
   .card-body {
     height: 50%;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
     .card-img-top {
       height: 100%;
       width: auto;
@@ -21,7 +25,7 @@
   }
 
   .product-card {
-    display: flex;
+    align-items: center;
     justify-content: center;
   }
 
@@ -50,19 +54,31 @@
   }
 
   .btn-primary {
-    display: none;
+    visibility: hidden;
 
     width: 100%;
+    opacity: 0;
 
-    color: #282c34;
+    color: white;
 
-    background-color: coral;
+    background-color: #2d2d2d;
     border: none;
+
+    transition: .3s ease-in-out;
+  }
+
+  .btn-primary:hover {
+    color: #282c34;
+    background-color: coral;
   }
 }
 
 .card:hover {
   .btn-primary {
-    display: block;
+    visibility: visible;
+    width: 100%;
+
+    opacity: 100;
+
   }
 }
