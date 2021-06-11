@@ -4,4 +4,10 @@
   min-height: 100vh;
 
   background-color: #f8f8f8;
+
+  .all-products-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
