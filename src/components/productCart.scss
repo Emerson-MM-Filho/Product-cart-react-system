@@ -20,4 +20,16 @@
       font-size: 1rem;
     }
   }
+
+  .total-price {
+    margin: 15px;
+    h3 {
+      text-align: end;
+
+      span {
+        color: coral;
+        padding-left: 15px;
+      }
+    }
+  }
 }
