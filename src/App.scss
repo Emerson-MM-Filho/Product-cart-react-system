@@ -12,28 +12,4 @@
     justify-content: space-between;
     flex-wrap: wrap;
   }
-
-  .cart {
-    box-sizing: border-box;
-    min-width: 20%;
-
-    background-color: white;
-
-    h2 {
-      box-sizing: border-box;
-      margin: 15px;
-      padding: 1rem;
-      border-bottom: 1px solid #282c34;
-    }
-
-    .cart-header-product {
-      display: flex;
-      justify-content: space-between;
-      margin: 15px;
-
-      h3 {
-        font-size: 1rem;
-      }
-    }
-  }
 }

@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import './App.scss';
 import ProductCard from "./components/productCard";
-import Cart from "./components/cart";
+import ProductCart from "./components/productCart";
 
 function App() {
   const [ allProducts, setAllProducts] = useState([])
@@ -24,14 +24,7 @@ function App() {
       <div className='all-products-cards'>
         {allProducts.map((current, index) => <ProductCard product={current} key={index} addToCart={addToCart}/>)}
       </div>
-      <div className='cart'>
-        <h2>My products cart</h2>
-        <div className='cart-header-product'>
-          <h3>Item</h3>
-          <h3>Price</h3>
-        </div>
-        {productToAddInCart.map((current, index) => <Cart product={current} key={index}/>)}
-      </div>
+      <ProductCart productsToAdd={productToAddInCart}/>
     </div>
   );
 }
