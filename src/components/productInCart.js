@@ -1,6 +1,6 @@
-import './cart.scss'
+import './productInCart.scss'
 
-const Cart = (props) => {
+const ProductInCart = (props) => {
   const { image, title, price } = props.product
 
   let name = ''
@@ -25,4 +25,4 @@ const Cart = (props) => {
   )
 }
 
-export default Cart
+export default ProductInCart
