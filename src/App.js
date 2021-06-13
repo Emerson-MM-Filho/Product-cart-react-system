@@ -5,8 +5,10 @@ import ProductCard from "./components/productCard";
 import ProductCart from "./components/productCart";
 
 function App() {
+  const savedCart = JSON.parse(localStorage.getItem('cart')) || []
+
   const [ allProducts, setAllProducts] = useState([])
-  const [ productToAddInCart, setProductToAddInCart] = useState([])
+  const [ productToAddInCart, setProductToAddInCart] = useState(savedCart)
 
   fetch('https://fakestoreapi.com/products')
     .then(res => res.json())
@@ -18,6 +20,7 @@ function App() {
     })
   }
 
+  localStorage.setItem('cart', JSON.stringify(productToAddInCart))
 
   return (
     <div className='page-content'>
